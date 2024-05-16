@@ -32,14 +32,7 @@ composer install
 
 ##### 4. Run database migrations.
 
-From root folder run
-
-```
-docker-compose run --rm php artisan migrate
-docker-compose run --rm php artisan storage:link
-```
-
-or from root folder run
+from root folder run
 
 ```
 docker exec -it  php bash
