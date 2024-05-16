@@ -53,7 +53,7 @@ class ImageController extends Controller
             $manager = new ImageManager(new Driver());
             $miniature = $manager->read(file_get_contents($request->image));
             $miniature->resize(50, 90);
-            $miniature->save(storage_path('app/public').'/miniatures/' . $imageName);
+            $miniature->save(storage_path('app/public'). '/miniature+' . $imageName);
 
             return response()->json([
                 'message' => "Image successfully added."
@@ -82,7 +82,7 @@ class ImageController extends Controller
 
         if($storage->exists($imageItem->image)) {
             $storage->delete($imageItem->image);
-            $storage->delete('/miniatures/'. $imageItem->image);
+            $storage->delete('miniature+'. $imageItem->image);
         }
 
         $imageItem->delete();

@@ -4,7 +4,7 @@ const TableItem = ({ imageItem, index, deleteImage }) => {
       <span className="divTableCell">{index + 1} </span>
       <span className="divTableCell">
         <img
-          src={`http://localhost:8080/storage/miniatures/${imageItem.image}`}
+          src={`http://localhost:8080/storage/miniature+${imageItem.image}`}
           alt=""
           height={50}
           width={90}
